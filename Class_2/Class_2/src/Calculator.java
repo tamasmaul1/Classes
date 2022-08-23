@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Calculator {
     public static void main(String[] args){
@@ -6,6 +6,15 @@ public class Calculator {
         Scanner myObj = new Scanner(System.in);
         System.out.println("Select method:\n Add: A\n Sub: S\n Multiply: M\n Divide: D");
         String method = myObj.nextLine();
+        String [] accepted_in = new String[] {"A", "S", "M", "D"};
+        List<String> accepted_in_list = Arrays.asList(accepted_in);
+        while(method.length() != 1 || accepted_in_list.contains(method)==false ){
+
+            System.out.println("Select a valid method: ");
+
+            method = myObj.nextLine();
+
+        }
         System.out.println("Selected method is: " + method);
         System.out.println("1st number: ");
         int num1 = myObj.nextInt();
