@@ -28,7 +28,10 @@ public class RockPaperScissors {
                 int play_again = myScanner.nextInt();
                 if(play_again == 1){next_game = true;}
             }
-            else{break;}
+            else{
+                System.out.print("Invalid input, program shutting down.");
+                break;
+            }
         }
         while(next_game);
         //System.out.println(results);
